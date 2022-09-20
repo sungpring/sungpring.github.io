@@ -2,9 +2,167 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+<link rel="shortcut icon" type="image/png" href="./resources/favicon.png">
+<!-- 검색 크롤러를 robots 하면 모든 검색엔진 허용. index:페이지 검색결과에 노출, follow 페이지를 포함한 링크된 페이지 검색결과 노출 -->
+<!-- max-image-preview:large, max-snippet:-1, max-video-preview:-1 : Yoast SEO -->
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="keywords" content="github, portfolio">
+
+<title>Index : sungpring's github portfolio</title>
+
+<link rel="canonical" href="https://sungpring.github.io/"> <!-- canonical 설정하면 대표페이지를 설정. -->
+<link rel="alternate" hreflang="ko" href="https://sungpring.github.io/" /> <!-- link rel="alternate" 로 설정하면 다국어 페이지 설정가능 -->
+<link rel="alternate" hreflang="en" href="https://sungpring.github.io/" />
+
+<meta property="og:title" content="sungpring's github portfolio"> <!-- 대표 타이틀 -->
+<meta property="og:type" content="website"> <!-- 타입은 website -->
+<meta property="og:image" content="./resources/meta-property-image.png"> <!--meta 이미지 설정-->
+<meta property="og:url" content="https://sungpring.github.io/"> <!--대표 url-->
+<meta property="og:description" content="sungpring's github portfolio"> <!--사이트 설명-->
+<meta property="og:site_name" content="sungpring's github portfolio"> <!--사이트 이름-->
+<meta property="og:locale" content="ko_KR"> <!-- 언어 지역 : 여러개 가능-->
+<meta property="og:locale" content="en_US">
+
+<!-- 트위터 -->
+<meta name="twitter:card" content="summary_large_image"> <!--To get started with implementing Cards markup. 트위터를 통한-->
+<meta name="twitter:title" content="sungpring's github portfolio">
+<meta name="twitter:description" content="sungpring's github portfolio">
+<meta name="twitter:image" content="./resources/meta-property-image.png">
+<meta name="twitter:domain" content="https://sungpring.github.io/"> <!--사이트명-->
+<!-- The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”. -->
+<!--BreadcrumbList 는 구글이 특정 웹페이지의 검색결과를 좀 더 프로페셔널하게 그리고 깨끗하게 만드는 스키마다.-->
+<!-- potentialAction -->
+<!-- SearchAction 은 안넣었다. 나는 정적인 페이지를 만들려고 하므로.
+{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"name": "Example.com",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "http://example.com/search?q={q}",
+"query-input": "required maxlength=100 name=q"
+}
+}
+-->
+<!-- 구조화 된 SEO application/ld+json -->
+<script type="application/ld+json"> 
+{"@context":"https://schema.org"
+,"@graph":[
+	{"@type":"WebSite"
+	,"@id":"https://sungpring.github.io/"
+	,"url":"https://sungpring.github.io/"
+	,"name":"sungpring's github portfolio"
+	,"description":"sungpring's github portfolio"
+	,"inLanguage":"ko_KR"}
+	
+	,{"@type":"WebPage"
+	,"@id":"https://sungpring.github.io/"
+	,"url":"https://sungpring.github.io/"
+	,"name":"sungpring's github portfolio"
+	//A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
+	//,"datePublished":"2012-03-02T01:30:02+00:00" T뒤에는 hh:mm:ss 이다.
+	//,"dateModified":"2019-02-20T01:44:21+00:00"
+	,"breadcrumb":{"@id":"https://sungpring.github.io/"}
+	,"inLanguage":"ko_KR"
+	,"potentialAction":[
+		{"@type":"ViewAction"
+		,"target":["https://sungpring.github.io/"]
+		}
+	]}
+	
+	,{"@type":"BreadcrumbList"
+	,"@id":"https://sungpring.github.io/"
+	,"itemListElement":[
+		{"@type":"ListItem"
+		,"position":1
+		,"name": "Index"
+		,"item":
+			{"@type":"WebPage"
+			,"@id":"https://sungpring.github.io/"
+			,"url":"https://sungpring.github.io/"
+			,"name":"Index"}
+		}]
+	}
+	
+]}
+</script>
+
+<!-- JQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- JQuery end -->
+
+<style>
+/* CSS 초기화 */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+margin:0;
+padding:0;
+border:0;
+font-size:100%;
+vertical-align:baseline;
+background:transparent;
+}
+
+body{
+line-height:1;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ 
+display:block;
+}
+
+nav ul, li{
+list-style:none;
+}
+
+a{
+margin:0;
+padding:0;
+font-size:100%;
+text-decoration:none;
+vertical-align:baseline;
+color:#fff;
+background:transparent;
+}
+
+img{
+vertical-align:top;
+}
+
+table{
+border-collapse:collapse;
+border-spacing:0;
+}
+
+input{
+margin:0;
+padding:0;
+box-sizing:content-box;
+vertical-align:top;
+appearance:none;
+border:1px solid #3e3e3e;
+color:#3e3e3e;
+border-radius:0;
+}
+
+input::-moz-input-placeholder{
+color:#3e3e3e;
+}
+
+input::-webkit-input-placeholder {
+color:#3e3e3e;
+}
+
+/* 웹폰트 CSS */
+@font-face{font-family:'Code Next Italic'; src:url(/static/font/Code-Next-ExtraBold-Italic.woff)}
+@font-face{font-family:'ModernSans Light'; src:url(/static/font/ModernSans-Light.woff)}
+/* CSS 초기화 end */
+
+</style>
 </head>
 <body>
 Hello World
+<img src="./resources/meta-property-image.png">
 </body>
 </html>
