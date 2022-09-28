@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="keywords" content="github, portfolio">
 
-<title>Index : sungpring's github portfolio</title>
+<title>sungpring's github portfolio</title>
 
 <link rel="canonical" href="https://sungpring.github.io/"> <!-- canonical 설정하면 대표페이지를 설정. -->
 <link rel="alternate" hreflang="ko" href="https://sungpring.github.io/" /> <!-- link rel="alternate" 로 설정하면 다국어 페이지 설정가능 -->
@@ -91,8 +91,20 @@
 <!-- JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- JQuery end -->
-
+<!--나눔 폰트-->
+<!--<link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">-->
+<!--나눔 폰트 end-->
+<!--font-family: 'NanumGothicLight';
+font-family: 'NanumGothic';
+font-family: 'NanumGothicBold';
+font-family: 'NanumGothicExtraBold';-->
+<!-- font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+<!-- font-awesome version 5 검색은 여기서 : https://fontawesome.com/v5/search?o=r&m=free -->
+<!-- font-awesome end -->
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); /*font-family: 'Noto Sans KR', sans-serif;*/
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@900&display=swap'); font-family: 'Noto Sans KR', sans-serif;*/
 /* CSS 초기화 */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
@@ -106,6 +118,7 @@ background:transparent;
 
 body{
 line-height:1;
+box-sizing: border-box;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{ 
@@ -153,16 +166,492 @@ color:#3e3e3e;
 input::-webkit-input-placeholder {
 color:#3e3e3e;
 }
-
-/* 웹폰트 CSS */
-@font-face{font-family:'Code Next Italic'; src:url(/static/font/Code-Next-ExtraBold-Italic.woff)}
-@font-face{font-family:'ModernSans Light'; src:url(/static/font/ModernSans-Light.woff)}
 /* CSS 초기화 end */
+/* 웹폰트 CSS */
+/*@font-face{font-family:'Code Next Italic'; src:url(/static/font/Code-Next-ExtraBold-Italic.woff)}
+*/
 
+/* scroll bar */
+*::-webkit-scrollbar {
+width: 10px;  /* scroll bar width */
+}
+
+*::-webkit-scrollbar-thumb {
+height: 20%; /* scroll bar length */
+background: #0018ff; /* scroll bar color */
+border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+background: rgba(22, 69, 255, 0.1);  /*scroll bar background*/
+}
+/* scroll bar end */
+
+body,html{
+	font-family: 'Noto Sans KR', sans-serif;
+	scroll-behavior: smooth;
+}
+
+section{
+	padding: 5rem 0;
+	padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* intro */
+.intro{
+	padding: 0 1.6rem;
+    align-items: center;
+    background: #fff;
+    border-bottom: 0;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    font-weight: 400;
+    height: 100vh;
+    left: 0;
+    margin-bottom: 0;
+    min-height: 100vh;
+    text-align: center;
+    right: 0;
+    top: 0;
+    z-index: 1;	
+}
+.intro_depth{
+	margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+	padding-left: 10px;
+    padding-right: 10px;
+}
+.intro_h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 4rem;
+    margin-bottom: 3.2rem;
+    -webkit-text-stroke: 0.5px #3e3e3e;
+    text-shadow: 2px 2px 0px #48adff;
+}
+.intro_em{
+	color:#0018ff;
+}
+.intro_p{
+	justify-content: center;
+}
+.intro_a{
+    color: #0018ff;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.5px #3e3e3e;
+    text-shadow: 1px 1px 0px #48adff;
+}
+
+/* about_me */
+.about_me{
+	height: 60vh;
+    /*background-color: #02aab0;*/
+    background-image: linear-gradient(135deg,#0018ff,#8c48ff);
+    border-top: 0;
+    clip-path: none;
+    color: #fff;
+    /*padding-bottom: 10%;*/
+}
+.about_me_h2{
+	font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.about_me_depth_2{
+	display: flex;
+    flex-wrap: wrap;
+}
+.about_me_picture{
+	width: 100%;
+    text-align: center;
+}
+.about_me_picture_img{
+	width:250px;
+	max-width:100%;
+	box-shadow: 1px 1px 10px rgb(4 12 41 / 40%);
+}
+.about_me_text{
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 4.5rem;
+    text-align: center;
+}
+.about_me_text p:nth-child(1){
+	margin-bottom:1rem;
+}
+.about_me_text p:nth-child(2){
+	margin-bottom:3rem;
+}
+.about_me_text span{
+	border: 1px solid #fff;
+    /* padding: 4px 20px 10px; */
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    /* transition: all .6s cubic-bezier(.19,1,.22,1); */
+    z-index: 1;
+}
+
+/* projects */
+.projects_h2{
+	font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.projects_content{
+	margin-bottom: 4rem;
+}
+.projects_content_text_h3{
+	margin-bottom: 1rem;
+}
+.projects_content_text p{
+	line-height: 1.5rem;
+}
+.projects_content_text em{
+	color:#0018ff;
+	font-weight: 900;
+}
+.projects_content_text a{
+    color: #0018ff;
+    margin-top: 1.5rem;
+    border: 1px solid #0018ff;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    /* transition: all .6s cubic-bezier(.19,1,.22,1); */
+    z-index: 1;
+}
+.projects_content_picture{
+	text-align: center;
+	margin-top: 1.5rem;
+}
+.projects_content_picture_img{
+    max-width: 100%;
+	box-shadow: 1px 1px 10px #a2a2a2;
+}
+
+/* blog */
+.blog{
+	background-image: linear-gradient(135deg,#0018ff,#8c48ff);
+    padding: 8rem 1rem;
+}
+.blog_h2{
+	font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.blog_content{
+	text-align: center;
+}
+.blog_content_p{
+	color: #fff;
+	font-weight: 300;
+}
+.blog_content_a{
+	color: #fff;
+    margin-top: 1.5rem;
+    border: 1px solid #fff;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.8rem 1.6rem;
+    position: relative;
+    /* transition: all .6s cubic-bezier(.19,1,.22,1); */
+    z-index: 1;
+}
+
+/* Skill level */
+.skill_level_h2{
+	font-size: 2.2rem;
+    font-weight: 700;
+    color: #3e3e3e;
+    margin: 0 0 4.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.skill_front_level_color{
+	display: flex;
+}
+.skill_level_content_h2{
+	position: absolute;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    margin-top: calc(20vw - 2rem);
+    margin-left: 11vw;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #3e3e3e;
+    border-bottom: 1px solid #fff;
+    z-index: 10;
+}
+.skill_level_content_square{
+    width: 30vw;
+    height: 40vw;
+    background-color: #0018ff;
+}
+.skill_level_content_img{
+	width: 70vw;
+    height: 35vw;
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 2vw;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./resources/skill-level-content-img-front.jpg);
+}
+.skill_front_content_list{
+	display: flex;
+	flex-direction: column;
+}
+.skill_front_content_list_item{
+	display: flex;
+	margin-top: 1.5rem;
+}
+.skill_front_content_list_h3{
+    color: #0018ff;
+    font-weight: 900;
+    line-height: 1.2rem;
+	width: 5rem;
+}
+.skill_progress_bar{
+	width: 100%;
+    height: 1.5rem;
+    font-weight: 600;
+    font-size: .8rem;
+    margin-left: 1rem;
+}
+.skill_back_level{
+	margin-top:4rem;
+}
+.skill_back_level .skill_level_content_img{
+	background-image: url(./resources/skill-level-content-img-back.jpg);
+}
+
+/* footer */
+.footer{
+	background-color: #3e3e3e;
+	padding: 8rem 1rem;
+}
+.footer_depth{
+	text-align: center;
+}
+.footer_arrow_img{
+	max-width: 2rem;
+}
+.footer_icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.footer_icons i{
+	width: 4rem;
+	color: #fff;
+}
+.footer_director{
+	border-top: 1px solid #fff;
+    padding-top: 1.5rem;
+    font-weight: lighter;
+    color: #838383;
+}
 </style>
 </head>
-<body>
-Hello World
-<img src="./resources/meta-property-image.png">
+<body id="body">
+	<div id="wrap">
+		<section id="intro" class="intro"> 
+			<div class="intro_depth"> 
+				<h1 class="intro_h1"> 안녕하세요 개발자 ID <br> <em class="intro_em">sungpring</em> 입니다. <br> Curious Developer. </h1> 
+				<p class="intro_p"> <a rel="noreferrer" class="intro_a" href="#about_me">View more</a> </p>
+				<!--rel="noreferrer" : 사용자가 하이퍼링크를 클릭할 때 브라우저가 HTTP 리퍼러 헤더(referer header)를 전송해서는 안 됨을 나타냄.-->
+			</div> 
+		</section>
+		<section id="about_me" class="about_me"> 
+			<div class="about_me_depth">
+				<h2 class="about_me_h2">About me</h2>
+				<div class="about_me_depth_2">
+					<div class="about_me_picture">
+						<img class="about_me_picture_img" src="./resources/about-me.jpg" alt="Profile Image">
+					</div>
+					<div class="about_me_text">
+						<p>안녕하세요. 개발을 원하고 개발을 하고 싶은 人 입니다. </p>
+						<p>항상 최선을 다하려고 노력합니다.</p>
+						<span><a rel="noreferrer" class="about_me_text_a" href="#projects">View projects</a></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="projects" class="projects"> 
+			<div class="projects_depth">
+				<h2 class="projects_h2">Projects</h2>
+				<div class="projects_content">
+					<div class="projects_content_text">
+						<h3 class="projects_content_text_h3">tourguru.xyz</h3>
+						<p>
+							<em>Front</em> : JSP, HTML CSS 는 스킨활용, JavaScript<br>
+							<em>Back</em></Back>: Java, Spring Boot, MYSQL <br>
+							<em>Server</em> : AWS EC2 가상화, RDS, S3 bucket, 자동배포(Code deploy, Git action, Shell Script), Nginx<br>
+						</p>
+						<a rel="noreferrer" class="projects_content_text_a" href="http://tourguru.xyz/"  target="_blank">Go to project</a>
+					</div>
+					<div class="projects_content_picture">
+						<img class="projects_content_picture_img" src="./resources/my-page.jpg" alt="Project Image">
+					</div>
+				</div>
+
+				<div class="projects_content">
+					<div class="projects_content_text">
+						<h3 class="projects_content_text_h3">mypage1.xyz</h3>
+						<p>
+							<em>Front</em> : JSP, HTML, CSS, JavaScript<br>
+							<em>Back</em></Back>: Java, Spring Boot, MYSQL <br>
+							<em>Server</em> : 홈서버, Synology NAS, 수동배포, Nginx<br>
+						</p>
+						<a rel="noreferrer" class="projects_content_text_a" href="http://mypage1.xyz/"  target="_blank">Go to project</a>
+					</div>
+					<div class="projects_content_picture">
+						<img class="projects_content_picture_img" src="./resources/my-page-1.jpg" alt="Project Image">
+					</div>
+				</div>
+
+				<div class="projects_content">
+					<div class="projects_content_text">
+						<h3 class="projects_content_text_h3">curious-korea.xyz</h3>
+						<p>
+							<em>Front</em> : Thymeleaf, HTML, CSS, JavaScript<br>
+							<em>Back</em></Back>: Java, Spring Boot<br>
+							<em>Server</em> : 홈서버, Synology NAS, 수동배포, Nginx<br>
+						</p>
+						<a rel="noreferrer" class="projects_content_text_a" href="http://curious-korea.xyz/"  target="_blank">Go to project</a>
+					</div>
+					<div class="projects_content_picture">
+						<img class="projects_content_picture_img" src="./resources/my-page-2.jpg" alt="Project Image">
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<section class="blog">
+			<div class="blog_depth">
+				<h2 class="blog_h2">My blog</h2>
+				<div class="blog_content">
+					<p class="blog_content_p"><em>justwritedown123. tistory .com</em></p>
+					<a rel="noreferrer" class="blog_content_a" href="https://justwritedown123.tistory.com/"  target="_blank">Go to blog</a>
+				</div>
+			</div>
+		</section>
+		<section class="skill_level">
+			<div class="skill_level_depth">
+				<h2 class="skill_level_h2">Skill level</h2>
+				<div class="skill_level_content">
+					<div class="skill_front_level">
+						<div class="skill_front_level_color">
+							<h2 class="skill_level_content_h2">Front</h2>
+							<div class="skill_level_content_square"></div>
+							<div class="skill_level_content_img"></div>
+						</div>
+						<div class="skill_front_content_list">
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>Html</em></h3>
+								<div class="skill_progress_bar html_bar"></div>
+							</div>
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>CSS</em></h3>
+								<div class="skill_progress_bar css_bar"></div>
+							</div>
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>JSP</em></h3>
+								<div class="skill_progress_bar jsp_bar"></div>
+							</div>
+						</div>
+					</div>
+					<div class="skill_back_level">
+						<div class="skill_front_level_color">
+							<h2 class="skill_level_content_h2">Back</h2>
+							<div class="skill_level_content_square"></div>
+							<div class="skill_level_content_img"></div>
+						</div>
+						<div class="skill_front_content_list">
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>Java</em></h3>
+								<div class="skill_progress_bar java_bar"></div>
+							</div>
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>Spring</em></h3>
+								<div class="skill_progress_bar spring_bar"></div>
+							</div>
+							<div class="skill_front_content_list_item">
+								<h3 class="skill_front_content_list_h3"><em>Mysql</em></h3>
+								<div class="skill_progress_bar mysql_bar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="footer_depth">
+				<a rel="noreferrer" class="footer_img_a" href="#intro"><img class="footer_arrow_img" src="./resources/arrow.png" alt="Arrow Image"></a>
+				<div class="footer_icons">
+					<a rel="noreferrer" href="https://github.com/sungpring" target="_blank"><i class="fab fa-git fa-2x"></i></a>
+					<a rel="noreferrer" href="mailto:sungpring@naver.com?subject=깃허브 포트폴리오를 통해 이메일 발송합니다."><i class="far fa-envelope fa-2x"></i></a>
+					<a rel="noreferrer" href="https://justwritedown123.tistory.com/" target="_blank"><i class="fab fa-blogger fa-2x"></i></a>
+				</div>
+				<div class="footer_director">
+					<p>sungpring's github portfolio page which referenced the-simplefolio. netlify. app</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+<script type="text/javascript">
+/* strict mode*/
+"use strict";
+
+const skillLevelList = (barElementClass, percent) => {
+	let $htmlBar = document.querySelector(barElementClass); //let $htmlBar = document.querySelector(".html_bar");
+	let html_bar = percent; /*, resolveMinwon = 12;*/ //let html_bar = 20;
+	let html_bar_num = 0;
+	const htmlBarAnimation = setInterval(() => {
+		$htmlBar.style.background = `linear-gradient(to right, #0018ff 0 ${html_bar_num}%, rgba(22, 69, 255, 0.1) ${html_bar_num}% 100% )`
+		html_bar_num++ >= html_bar && clearInterval(htmlBarAnimation)
+	}, 10);
+}
+let frontList = [
+	['.html_bar',22],
+	['.css_bar',25],
+	['.jsp_bar',19],
+];
+let backList = [
+	['.java_bar',16],
+	['.spring_bar',21],
+	['.mysql_bar',13],
+];
+frontList.map(list => {
+	skillLevelList(list[0],list[1]);
+});
+backList.map(list => {
+	skillLevelList(list[0],list[1]);
+});
+
+
+</script>
 </body>
 </html>
