@@ -247,13 +247,10 @@ section{
 
 /* about_me */
 .about_me{
-	height: 60vh;
-    /*background-color: #02aab0;*/
     background-image: linear-gradient(135deg,#0018ff,#8c48ff);
     border-top: 0;
     clip-path: none;
     color: #fff;
-    /*padding-bottom: 10%;*/
 }
 .about_me_h2{
 	font-size: 2.2rem;
@@ -473,6 +470,24 @@ section{
     font-weight: lighter;
     color: #838383;
 }
+
+/* TABLET & PC SIZE */
+@media all and (min-width:768px){
+.projects_content{
+	display: flex;
+    align-items: center;
+	justify-content: center;
+}
+.projects_content_text{
+	margin-top: 1.5rem;
+	margin-right: 1.5rem;
+	width: 30rem;
+}
+.projects_content_picture_img{
+	width: 55rem;
+}
+
+}
 </style>
 </head>
 <body id="body">
@@ -634,12 +649,12 @@ const skillLevelList = (barElementClass, percent) => {
 		html_bar_num++ >= html_bar && clearInterval(htmlBarAnimation)
 	}, 10);
 }
-let frontList = [
+const frontList = [
 	['.html_bar',22],
 	['.css_bar',25],
 	['.jsp_bar',19],
 ];
-let backList = [
+const backList = [
 	['.java_bar',16],
 	['.spring_bar',21],
 	['.mysql_bar',13],
