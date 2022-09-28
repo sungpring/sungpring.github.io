@@ -645,7 +645,7 @@ const skillLevelList = (barElementClass, percent) => {
 	let html_bar = percent; /*, resolveMinwon = 12;*/ //let html_bar = 20;
 	let html_bar_num = 0;
 	const htmlBarAnimation = setInterval(() => {
-		$htmlBar.style.background = `linear-gradient(to right, #0018ff 0 ${html_bar_num}%, rgba(22, 69, 255, 0.1) ${html_bar_num}% 100% )`
+		$htmlBar.style.background = `linear-gradient(to right,  rgb(0, 24, 255) 0px, #8c48ff ${html_bar_num}%, rgba(22, 69, 255, 0.1) ${html_bar_num}% 100% )`
 		html_bar_num++ >= html_bar && clearInterval(htmlBarAnimation)
 	}, 10);
 }
