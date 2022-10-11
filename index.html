@@ -187,9 +187,23 @@ background: rgba(22, 69, 255, 0.1);  /*scroll bar background*/
 }
 /* scroll bar end */
 
+/* fade-out when scroll */
+.fade_in{
+	transform: translateX(100%);
+	transition: transform 1s ease;
+}
+.fade_in:nth-of-type(even){
+	transform: translateX(-100%);
+}
+.fade_in.show{
+	transform: translateX(0);
+}
+/* fade-out when scroll end */
+
 body,html{
 	font-family: 'Noto Sans KR', sans-serif;
 	scroll-behavior: smooth;
+	overflow-x:hidden;
 }
 
 section{
@@ -499,7 +513,7 @@ section{
 				<!--rel="noreferrer" : 사용자가 하이퍼링크를 클릭할 때 브라우저가 HTTP 리퍼러 헤더(referer header)를 전송해서는 안 됨을 나타냄.-->
 			</div> 
 		</section>
-		<section id="about_me" class="about_me"> 
+		<section id="about_me" class="about_me fade_in"> 
 			<div class="about_me_depth">
 				<h2 class="about_me_h2">About me</h2>
 				<div class="about_me_depth_2">
@@ -514,7 +528,7 @@ section{
 				</div>
 			</div>
 		</section>
-		<section id="projects" class="projects"> 
+		<section id="projects" class="projects fade_in"> 
 			<div class="projects_depth">
 				<h2 class="projects_h2">Projects</h2>
 				<div class="projects_content">
@@ -564,7 +578,7 @@ section{
 
 			</div>
 		</section>
-		<section class="blog">
+		<section class="blog fade_in">
 			<div class="blog_depth">
 				<h2 class="blog_h2">My blog</h2>
 				<div class="blog_content">
@@ -573,7 +587,7 @@ section{
 				</div>
 			</div>
 		</section>
-		<section class="skill_level">
+		<section class="skill_level fade_in">
 			<div class="skill_level_depth">
 				<h2 class="skill_level_h2">Skill level</h2>
 				<div class="skill_level_content">
@@ -640,6 +654,21 @@ section{
 /* strict mode*/
 "use strict";
 
+/* fade-out when scroll */
+const sections = document.querySelectorAll('.fade_in');
+const fadeOutScrollFunc = function(){
+	const windowHeight = window.innerHeight;
+	sections.forEach(section=>{
+		const boxTop=section.getBoundingClientRect().top;
+		if(boxTop < windowHeight){
+			section.classList.add('show');
+		}
+	});
+};
+window.addEventListener('scroll', fadeOutScrollFunc);
+/* fade-out when scroll end */
+
+/* skill bar */
 const skillLevelList = (barElementClass, percent) => {
 	let $htmlBar = document.querySelector(barElementClass); //let $htmlBar = document.querySelector(".html_bar");
 	let html_bar = percent; /*, resolveMinwon = 12;*/ //let html_bar = 20;
@@ -665,6 +694,8 @@ frontList.map(list => {
 backList.map(list => {
 	skillLevelList(list[0],list[1]);
 });
+/* skill bar end */
+
 
 
 </script>
