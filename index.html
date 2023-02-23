@@ -509,7 +509,7 @@ section{
 		<section id="intro" class="intro"> 
 			<div class="intro_depth"> 
 				<h1 class="intro_h1"> 안녕하세요 개발자 ID <br> <em class="intro_em">sungpring</em> 입니다. <br> Curious Developer. </h1> 
-				<p class="intro_p"> <a rel="noreferrer" class="intro_a" href="#about_me">View more</a> </p>
+				<p class="intro_p"> <a rel="noreferrer" class="intro_a" href="#" onclick="return false;">View more</a> </p>
 				<!--rel="noreferrer" : 사용자가 하이퍼링크를 클릭할 때 브라우저가 HTTP 리퍼러 헤더(referer header)를 전송해서는 안 됨을 나타냄.-->
 			</div> 
 		</section>
@@ -523,7 +523,7 @@ section{
 					<div class="about_me_text">
 						<p>안녕하세요. 개발을 원하고 개발을 하고 싶은 人 입니다. </p>
 						<p>항상 최선을 다하려고 노력합니다.</p>
-						<span><a rel="noreferrer" class="about_me_text_a" href="#projects">View projects</a></span>
+						<span><a rel="noreferrer" class="about_me_text_a" href="#" onclick="return false;">View projects</a></span>
 					</div>
 				</div>
 			</div>
@@ -653,6 +653,20 @@ section{
 <script type="text/javascript">
 /* strict mode*/
 "use strict";
+
+// 절대 경로 기반 클릭 이동 이벤트
+document.querySelector('.intro_p').addEventListener('click', function(e){
+	const introHeight = document.querySelector('.intro').clientHeight;
+	window.scrollTo({ top: introHeight, left: 0, behavior: 'smooth' });
+});
+
+// 절대 경로 기반 클릭 이동 이벤트
+document.querySelector('.about_me_text_a').addEventListener('click', function(e){
+	const relativeTop = document.querySelector('.projects').getBoundingClientRect().top;
+	window.scrollTo({ top: winY + relativeTop, left: 0, behavior: 'smooth' });
+});
+
+
 
 /* fade-out when scroll */
 const sections = document.querySelectorAll('.fade_in');
