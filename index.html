@@ -654,18 +654,18 @@ section{
 /* strict mode*/
 "use strict";
 
-// 절대 경로 기반 클릭 이동 이벤트
+/* 절대 경로 기반 클릭 이동 이벤트 */
 document.querySelector('.intro_p').addEventListener('click', function(e){
 	const introHeight = document.querySelector('.intro').clientHeight;
 	window.scrollTo({ top: introHeight, left: 0, behavior: 'smooth' });
 });
 
-// 절대 경로 기반 클릭 이동 이벤트
 document.querySelector('.about_me_text_a').addEventListener('click', function(e){
+	let winY = window.pageYOffset;
 	const relativeTop = document.querySelector('.projects').getBoundingClientRect().top;
 	window.scrollTo({ top: winY + relativeTop, left: 0, behavior: 'smooth' });
 });
-
+/* 절대 경로 기반 클릭 이동 이벤트 end */
 
 
 /* fade-out when scroll */
